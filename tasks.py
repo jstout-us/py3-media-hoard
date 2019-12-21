@@ -110,7 +110,7 @@ def cleanest(ctx):
 @task(cleaner)
 def test(ctx):
     """Run tests."""
-    ctx.run('tox')
+    ctx.run('tox --parallel 4')
 
 
 @task
