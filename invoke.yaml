@@ -1,0 +1,17 @@
+cc:
+    name:               cc-py3-pkg
+    version:            0.4.0
+
+pub:
+    uri_master:         https://upload.pypi.org/legacy/
+    uri_stage:          null
+    uri_develop:        null
+
+pkg:
+    name:               media_hoard
+
+scm:
+    type:               git
+    repo_owner:         jstout-us
+    repo_slug:          py3-media-hoard
+    version_tag_prefix: v_
