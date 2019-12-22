@@ -110,7 +110,7 @@ def cleanest(ctx):
 @task(cleaner)
 def test(ctx):
     """Run tests."""
-    ctx.run('tox')
+    ctx.run('tox --parallel 4')
 
 
 @task
@@ -133,7 +133,7 @@ def publish(ctx):
     ctx.run('twine upload --verbose dist/*', env=env)
 
 
-@task(test)
+@task()
 def reports(ctx):
     """Generate reports."""
     ctx.run('tox -e report')
