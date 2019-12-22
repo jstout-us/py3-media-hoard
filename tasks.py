@@ -133,7 +133,7 @@ def publish(ctx):
     ctx.run('twine upload --verbose dist/*', env=env)
 
 
-@task(test)
+@task()
 def reports(ctx):
     """Generate reports."""
     ctx.run('tox -e report')
