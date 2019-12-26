@@ -5,6 +5,7 @@ DEV_CFG_ROOT = ENV["DEV_CFG_ROOT"]
 
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/bionic64"
+  config.vm.synced_folder "/mnt/media-hoard-fix", "/vagrant_data"
 
   config.vm.provider "virtualbox" do |v|
     v.memory = 4096

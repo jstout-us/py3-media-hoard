@@ -17,11 +17,13 @@ echo "Add Ubuntu Dependencies"
 apt-get install -y build-essential \
                    git \
                    git-flow \
-                   python3-dev \
-                   python3-pip \
                    python3.5 \
                    python3.7 \
-                   python3.8 \
+                   python3-dateutil \
+                   python3-dev \
+                   python3-feedparser \
+                   python3-pip \
+                   python3-requests \
                    tig \
                    tree
 
