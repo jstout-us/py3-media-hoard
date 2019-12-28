@@ -7,5 +7,5 @@ import pytest
 import media_hoard
 
 
-def test_fail():
-    assert True == False
+def test_pass():
+    assert True == True
