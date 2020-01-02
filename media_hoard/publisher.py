@@ -58,6 +58,7 @@ def get_feed(src):
         'uri_site': feed['feed']['link'],
         'uri_feed': src,
         'uri_image': feed['feed']['image']['href'],
+        'items': len(items)
         }
 
     return (channel, items)
