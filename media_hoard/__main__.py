@@ -66,5 +66,8 @@ def subscribe(url):
     except api.SubscriptionExistsError as exc:
         click.echo('Already subscribed to channel - {}'.format(exc))
 
+    except api.FeedParseError:
+        click.echo('Subscription failed - Failed to retreive or parse feed')
+
     finally:
         cleanup()

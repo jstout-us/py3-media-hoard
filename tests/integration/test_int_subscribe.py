@@ -23,3 +23,6 @@ def test_subscribe_rss(fix_uri_rss, fix_channel_data):
 
     with pytest.raises(api.SubscriptionExistsError):
         api.subscribe(fix_uri_rss)
+
+    with pytest.raises(api.FeedParseError):
+        api.subscribe('path/to/no_such_fixture.rss')

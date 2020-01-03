@@ -7,6 +7,10 @@ from . import publisher
 from media_hoard.data.models import Channel
 
 
+class FeedParseError(Exception):
+    """Channel subscription exists."""
+
+
 class SubscriptionExistsError(Exception):
     """Channel subscription exists."""
 
@@ -15,8 +19,12 @@ def subscribe(src):
     """
     """
 
-    feed_data, _ = publisher.get_feed(src)
-    items = feed_data.pop('items')
+    try:
+        feed_data, _ = publisher.get_feed(src)
+        items = feed_data.pop('items')
+
+    except KeyError:
+        raise FeedParseError
 
     try:
         channel = Channel.objects.create(**feed_data)           # pylint: disable=no-member
