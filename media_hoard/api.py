@@ -14,14 +14,14 @@ class SubscriptionExistsError(Exception):
 def subscribe(src):
     """
     """
-    try:
-        feed_data, _ = publisher.get_feed(src)
-        items = feed_data.pop('items')
 
-        channel = Channel(**feed_data)
-        channel.save()
+    feed_data, _ = publisher.get_feed(src)
+    items = feed_data.pop('items')
+
+    try:
+        channel = Channel.objects.create(**feed_data)           # pylint: disable=no-member
 
     except IntegrityError:
-        raise SubscriptionExistsError
+        raise SubscriptionExistsError(feed_data['title'])
 
     return (channel.title, items)

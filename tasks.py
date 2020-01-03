@@ -156,6 +156,23 @@ def test_accept(ctx):
     """Run acceptance tests."""
     ctx.run('tox -e accept')
 
+@task
+def make_migrations(ctx):
+    """Make Django db migrations."""
+    ctx.run('mkdir -p media_hoard/data/migrations/')
+
+    from django.conf import settings
+    from django.core.management import execute_from_command_line
+
+    argv = ['manage.py', 'makemigrations']
+
+    settings.configure(
+        INSTALLED_APPS = ('media_hoard.data',)
+        )
+
+    execute_from_command_line(argv)
+
+
 docs = Collection()
 docs.add_task(docs_clean, name="clean")
 docs.add_task(docs_build, name="build")
@@ -166,6 +183,6 @@ scm.add_task(scm_push, name="push")
 scm.add_task(scm_status, name="status")
 
 ns = Collection(bump_version, build, clean, cleaner, cleanest, lint, publish, reports,
-                test, test_merge, test_accept)
+                test, test_merge, test_accept, make_migrations)
 ns.add_collection(docs, name="docs")
 ns.add_collection(scm, name="scm")

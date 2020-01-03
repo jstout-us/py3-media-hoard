@@ -42,7 +42,6 @@ def get_feed(src):
         items(list):    List of channel item dictionaries
     """
     feed = feedparser.parse(src)
-
     items = [_normalize_item(x) for x in feed.pop('entries')]
 
     publisher = '{} ({})'.format(feed['feed']['publisher_detail']['name'],
