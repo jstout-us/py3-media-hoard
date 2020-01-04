@@ -145,7 +145,7 @@ def build(ctx):
     ctx.run('python3 setup.py build sdist bdist_wheel')
 
 
-@task(test,lint)
+@task(cleanest,test,lint)
 def test_merge(ctx):
     """Run tox tests and linters before merging."""
     pass

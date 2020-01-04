@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 
-"""Module Media Hoard.config"""
+"""Module Media Hoard.config."""
 import os
+
 
 def get_data_root():
     """Return data root directory path."""

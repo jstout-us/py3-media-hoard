@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""Module Media Hoard.publisher"""
+"""Module Media Hoard.publisher."""
 import operator
 
 import feedparser
@@ -13,13 +13,15 @@ def _get_uri_src(links):
         if '.mp3' in link['href']:
             return (link['href'], link['type'])
 
+    return (None, None)
+
 
 def _normalize_duration(value):
     multipliers = [1, 60, 60*60]
     elements = [int(x) for x in value.split(':')]
     elements.reverse()
 
-    return sum([operator.mul(x,y) for (x,y) in zip(multipliers, elements)])
+    return sum([operator.mul(x, y) for (x, y) in zip(multipliers, elements)])
 
 
 def _normalize_item(entry):

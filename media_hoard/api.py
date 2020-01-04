@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
-"""Module Media Hoard.api"""
+"""Module Media Hoard.api."""
 from django.db.utils import IntegrityError
 
 from . import publisher
-from media_hoard.data.models import Channel
+from .data.models import Channel
 
 
 class FeedParseError(Exception):
@@ -16,9 +16,15 @@ class SubscriptionExistsError(Exception):
 
 
 def subscribe(src):
-    """
-    """
+    """Subscribe to channel using feed document located at src.
 
+    Args:
+        src(str):       url or file path
+
+    Returns:
+        title(str):     Channel title
+        items(int):     Number of channel item/entry items
+    """
     try:
         feed_data, _ = publisher.get_feed(src)
         items = feed_data.pop('items')

@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-"""subpackage Media Hoard.data"""
+"""subpackage Media Hoard.data."""
