@@ -59,3 +59,47 @@ def fix_btb_item():
         }
 
     return fixture
+
+
+@pytest.fixture
+def fix_tal_uri():
+    return 'tests/_fixtures/feeds/this_american_life.rss'
+
+
+@pytest.fixture
+def fix_tal_channel(fix_tal_uri):
+    subtitle = "This American Life is a weekly public radio show, heard by 2.2 million people on more than 500 stations. Another 2.5 million people download the weekly podcast."
+    uri_icon = "https://files.thisamericanlife.org/sites/all/themes/thislife/img/tal-name-1400x1400.png"
+
+    fixture = {
+        'title': "This American Life",
+        'subtitle': subtitle,
+        'author': "This American Life",
+        'language': "en",
+        'publisher': "This American Life (rich@thislife.org)",
+        'summary': '',
+        'uri_site': 'https://www.thisamericanlife.org',
+        'uri_feed': fix_tal_uri,
+        'uri_image': uri_icon,
+        'items': 10,
+        }
+
+    return fixture
+
+
+@pytest.fixture
+def fix_tal_item():
+    subtitle = "For the holidays, stories of families finally addressing the thorny thing they’ve never really talked about."
+    fixture = {
+        'title': "690: Too Close to Home",
+        'subtitle': subtitle,
+        'author': "This American Life",
+        'duration': 3594,
+        'time_published': datetime(2019, 12, 29, 23, 0, tzinfo=tz.UTC),
+        'guid': "44357 at https://www.thisamericanlife.org",
+        'guid_is_uri': False,
+        'uri_src': 'https://www.podtrac.com/pts/redirect.mp3/dovetail.prxu.org/188/d2029203-a4bb-4974-8921-96036bd70f46/690.mp3',
+        'file_type': 'audio/mpeg',
+        }
+
+    return fixture

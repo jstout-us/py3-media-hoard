@@ -38,9 +38,8 @@ def test_accept_sub_rss(tmp_path):
     assert expected == result
 
     # Second run of application
-    expected = 'Subscribed to channel - This American Life (? Items)\n'
+    expected = 'Subscribed to channel - This American Life (10 Items)\n'
     args[-1] = 'http://liberator/podcasts/this-american-life/channel.rss'
     result = subprocess.check_output(args=args, encoding='utf-8', env=env)
-    print(result)
 
     assert expected == result

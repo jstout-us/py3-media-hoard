@@ -203,7 +203,12 @@ def get_feed(dir_tmp, uri_feed):
     #     'uri_image': feed['feed']['image']['href'],
     #     'entries': [_normalize_entries(x) for x in feed['entries']]
     #     }
+    entries = feed.pop('entries')
+    pp(feed)
+    print('=========================')
+    pp(entries[0])
 
+    raise KeyError
     data = {
         'title': feed['feed']['title'],
         'slug': feed['feed']['title'].lower().replace(' ', '-'),
