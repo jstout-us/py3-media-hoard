@@ -31,7 +31,8 @@ from dateutil import parser
 
 FIX_ROOT = "/vagrant_data/"
 HASH_TYPE = "sha1"
-URI_FEED = "tests/_fixtures/feeds/behind_the_bastards.rss"
+# URI_FEED = "tests/_fixtures/feeds/behind_the_bastards.rss"
+URI_FEED = "tests/_fixtures/feeds/this_american_life.rss"
 LOG_LEVEL = logging.DEBUG
 BUF_SIZE = 65536
 
@@ -73,20 +74,47 @@ def _hash_file(file_path, hash_type):
     return hash_.hexdigest()
 
 
+# def _normalize_entries(raw_entry):
+#     entry = {
+#         'title': raw_entry['title'],
+#         'subtitle': raw_entry['subtitle'],
+#         'author': raw_entry['author'],
+#         'duration': int(raw_entry['itunes_duration']),
+#         'time_published': parser.parse(raw_entry['published']),
+#         'guid': raw_entry['id'],
+#         'guid_is_uri': raw_entry['guidislink'],
+#         'uri_src': raw_entry['links'][0]['href'],
+#         'file_type': raw_entry['links'][0]['type'],
+#         }
+
+#     return entry
+
 def _normalize_entries(raw_entry):
+
     entry = {
         'title': raw_entry['title'],
         'subtitle': raw_entry['subtitle'],
         'author': raw_entry['author'],
-        'duration': int(raw_entry['itunes_duration']),
+        'duration': _parse_duration(raw_entry['itunes_duration']),
         'time_published': parser.parse(raw_entry['published']),
         'guid': raw_entry['id'],
         'guid_is_uri': raw_entry['guidislink'],
-        'uri_src': raw_entry['links'][0]['href'],
-        'file_type': raw_entry['links'][0]['type'],
+        'uri_src': raw_entry['links'][1]['href'],
+        'file_type': raw_entry['links'][1]['type'],
         }
 
     return entry
+
+def _parse_duration(duration):
+    multipliers = [3600, 60, 1]
+    elements = [int(x) for x in duration.split(':')]
+
+    sum_ = 0
+
+    for mult, element in zip(multipliers, elements):
+        sum_ += mult * element
+
+    return sum_
 
 
 def _pickle_file(dir_tmp, data):
@@ -163,11 +191,28 @@ def get_feed(dir_tmp, uri_feed):
 
     feed = feedparser.parse(tmp_file)
 
+    # data = {
+    #     'title': feed['feed']['title'],
+    #     'slug': feed['feed']['title'].lower().replace(' ', '-'),
+    #     'subtitle': feed['feed']['subtitle'],
+    #     'summary': feed['feed']['summary'],
+    #     'author': feed['feed']['author'],
+    #     'language': feed['feed']['language'],
+    #     'uri_site': feed['feed']['link'],
+    #     'uri_feed': uri_feed,
+    #     'uri_image': feed['feed']['image']['href'],
+    #     'entries': [_normalize_entries(x) for x in feed['entries']]
+    #     }
+    entries = feed.pop('entries')
+    pp(feed)
+    print('=========================')
+    pp(entries[0])
+
+    raise KeyError
     data = {
         'title': feed['feed']['title'],
         'slug': feed['feed']['title'].lower().replace(' ', '-'),
         'subtitle': feed['feed']['subtitle'],
-        'summary': feed['feed']['summary'],
         'author': feed['feed']['author'],
         'language': feed['feed']['language'],
         'uri_site': feed['feed']['link'],

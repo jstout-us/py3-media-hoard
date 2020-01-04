@@ -21,6 +21,8 @@ apt-get install -y build-essential \
                    python3.7 \
                    python3-dateutil \
                    python3-dev \
+                   python3-django \
+                   python3-django-extensions \
                    python3-feedparser \
                    python3-pip \
                    python3-requests \

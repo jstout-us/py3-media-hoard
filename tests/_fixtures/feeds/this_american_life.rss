@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" media="screen" href="/~d/styles/rss2enclosuresfull.xsl"?><?xml-stylesheet type="text/css" media="screen" href="http://feed.thisamericanlife.org/~d/styles/itemcontent.css"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:feedburner="http://rssnamespace.org/feedburner/ext/1.0" version="2.0" xml:base="https://www.thisamericanlife.org">
+<channel>
+ <title>This American Life</title>
+ <link>https://www.thisamericanlife.org</link>
+ <description>This American Life is a weekly public radio show, heard by 2.2 million people on more than 500 stations. Another 2.5 million people download the weekly podcast. It is hosted by Ira Glass, produced in collaboration with Chicago Public Media, delivered to stations by PRX The Public Radio Exchange, and has won all of the major broadcasting awards.</description>
+ <language>en</language>
+ <copyright>Copyright 1995-2020 This American Life</copyright>
+ <itunes:author>This American Life</itunes:author>
+ <itunes:subtitle>This American Life is a weekly public radio show, heard by 2.2 million people on more than 500 stations. Another 2.5 million people download the weekly podcast.</itunes:subtitle>
+ <itunes:owner> <itunes:email>rich@thislife.org</itunes:email>
+</itunes:owner>
+ <itunes:category text="Society &amp; Culture" />
+ <itunes:category text="Arts" />
+ <itunes:category text="News"> <itunes:category text="Politics" />
+</itunes:category>
+ <itunes:image href="https://files.thisamericanlife.org/sites/all/themes/thislife/img/tal-name-1400x1400.png" />
+<atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="self" type="application/rss+xml" href="http://feed.thisamericanlife.org/talpodcast" /><feedburner:info uri="talpodcast" /><atom10:link xmlns:atom10="http://www.w3.org/2005/Atom" rel="hub" href="http://pubsubhubbub.appspot.com/" /><feedburner:feedFlare href="http://www.podnova.com/add.srf?url=http%3A%2F%2Ffeed.thisamericanlife.org%2Ftalpodcast" src="http://www.podnova.com/img_chicklet_podnova.gif">Subscribe with Podnova</feedburner:feedFlare><feedburner:feedFlare href="http://www.netvibes.com/subscribe.php?url=http%3A%2F%2Ffeed.thisamericanlife.org%2Ftalpodcast" src="//www.netvibes.com/img/add2netvibes.gif">Subscribe with Netvibes</feedburner:feedFlare><feedburner:feedFlare href="https://add.my.yahoo.com/rss?url=http%3A%2F%2Ffeed.thisamericanlife.org%2Ftalpodcast" src="http://us.i1.yimg.com/us.yimg.com/i/us/my/addtomyyahoo4.gif">Subscribe with My Yahoo!</feedburner:feedFlare><feedburner:feedFlare href="http://feedly.com/#subscription/feed/http://feed.thisamericanlife.org/talpodcast" src="http://s3.feedly.com/feedburner/feedly.png">Subscribe with Feedly</feedburner:feedFlare><feedburner:feedFlare href="https://www.subtome.com/#/subscribe?feeds=http%3A%2F%2Ffeed.thisamericanlife.org%2Ftalpodcast" src="http://www.subtome.com/subtome-feedburner.png">Subscribe with SubToMe</feedburner:feedFlare><feedburner:feedFlare href="http://fusion.google.com/add?feedurl=http%3A%2F%2Ffeed.thisamericanlife.org%2Ftalpodcast" src="http://buttons.googlesyndication.com/fusion/add.gif">Subscribe with Google</feedburner:feedFlare><item>
+ <title>690: Too Close to Home</title>
+ <link>http://feed.thisamericanlife.org/~r/talpodcast/~3/mpKFgRdYLcY/too-close-to-home</link>
+ <description>For the holidays, stories of families finally addressing the thorny thing they’ve never really talked about.&lt;img src="http://feeds.feedburner.com/~r/talpodcast/~4/mpKFgRdYLcY" height="1" width="1" alt=""/&gt;</description>
+ <pubDate>Sun, 29 Dec 2019 18:00:00 -0500</pubDate>
+ <guid isPermaLink="false">44357 at https://www.thisamericanlife.org</guid>
+ <itunes:author>This American Life</itunes:author>
+ <enclosure url="https://www.podtrac.com/pts/redirect.mp3/dovetail.prxu.org/188/d2029203-a4bb-4974-8921-96036bd70f46/690.mp3" type="audio/mpeg" />
+ <itunes:duration>00:59:54</itunes:duration>
+ <itunes:subtitle>For the holidays, stories of families finally addressing the thorny thing they’ve never really talked about.
+</itunes:subtitle>
+ <itunes:summary>For the holidays, stories of families finally addressing the thorny thing they’ve never really talked about.
+</itunes:summary>
+<dc:creator>This American Life</dc:creator><feedburner:origLink>https://www.thisamericanlife.org/690/too-close-to-home</feedburner:origLink></item>
+<item>
+ <title>576: Say Yes To Christmas</title>
+ <link>http://feed.thisamericanlife.org/~r/talpodcast/~3/HCfLpvDi8Gs/say-yes-to-christmas</link>
+ <description>No Christmas can ever be as good as the ones you had as a kid. But this week we go all in and bring the joy, the spontaneity, the sense that anything can happen back to Christmas. &lt;img src="http://feeds.feedburner.com/~r/talpodcast/~4/HCfLpvDi8Gs" height="1" width="1" alt=""/&gt;</description>
+ <pubDate>Sun, 22 Dec 2019 18:00:00 -0500</pubDate>
+ <guid isPermaLink="false">37097 at https://www.thisamericanlife.org</guid>
+ <itunes:author>This American Life</itunes:author>
+ <enclosure url="https://www.podtrac.com/pts/redirect.mp3/dovetail.prxu.org/188/b95f5bd9-ad7c-44ec-a5f3-8204a8dd89c1/576.mp3" type="audio/mpeg" />
+ <itunes:duration>01:02:45</itunes:duration>
+ <itunes:subtitle>We go all in and bring the joy, the spontaneity, the sense that anything can happen back to Christmas. 
+</itunes:subtitle>
+ <itunes:summary>No Christmas can ever be as good as the ones you had as a kid. But this week we go all in and bring the joy, the spontaneity, the sense that anything can happen back to Christmas. 
+</itunes:summary>
+<dc:creator>This American Life</dc:creator><feedburner:origLink>https://www.thisamericanlife.org/576/say-yes-to-christmas</feedburner:origLink></item>
+<item>
+ <title>323: The Super</title>
+ <link>http://feed.thisamericanlife.org/~r/talpodcast/~3/KWRcY6jqCjc/the-super</link>
+ <description>Stories of the mysterious hold supers have on their buildings, or their buildings have on them.&lt;img src="http://feeds.feedburner.com/~r/talpodcast/~4/KWRcY6jqCjc" height="1" width="1" alt=""/&gt;</description>
+ <pubDate>Sun, 15 Dec 2019 18:00:00 -0500</pubDate>
+ <guid isPermaLink="false">37350 at https://www.thisamericanlife.org</guid>
+ <itunes:author>This American Life</itunes:author>
+ <enclosure url="https://www.podtrac.com/pts/redirect.mp3/dovetail.prxu.org/188/45de49c2-ceb1-476c-9f55-318383543efb/323.mp3" type="audio/mpeg" />
+ <itunes:duration>01:00:30</itunes:duration>
+ <itunes:subtitle>Stories of the mysterious hold supers have on their buildings, or their buildings have on them.
+</itunes:subtitle>
+ <itunes:summary>Stories of the mysterious hold supers have on their buildings, or their buildings have on them.
+</itunes:summary>
+<dc:creator>This American Life</dc:creator><feedburner:origLink>https://www.thisamericanlife.org/323/the-super</feedburner:origLink></item>
+<item>
+ <title>689: Digging Up the Bones</title>
+ <link>http://feed.thisamericanlife.org/~r/talpodcast/~3/h7h3TYVA54s/digging-up-the-bones</link>
+ <description>There's a lot that can be gained from unearthing the past -- learning about oneself, learning about others. But, it doesn't always go how you'd expect.&lt;img src="http://feeds.feedburner.com/~r/talpodcast/~4/h7h3TYVA54s" height="1" width="1" alt=""/&gt;</description>
+ <pubDate>Sun, 08 Dec 2019 18:00:00 -0500</pubDate>
+ <guid isPermaLink="false">44347 at https://www.thisamericanlife.org</guid>
+ <itunes:author>This American Life</itunes:author>
+ <enclosure url="https://www.podtrac.com/pts/redirect.mp3/dovetail.prxu.org/188/b45329bb-ba26-40b5-8a84-b444d13a217b/689.mp3" type="audio/mpeg" />
+ <itunes:duration>00:59:47</itunes:duration>
+ <itunes:subtitle>There's a lot that can be gained from unearthing the past -- learning about oneself, learning about others. But, it doesn't always go how you'd expect.
+</itunes:subtitle>
+ <itunes:summary>There's a lot that can be gained from unearthing the past -- learning about oneself, learning about others. But, it doesn't always go how you'd expect.
+</itunes:summary>
+<dc:creator>This American Life</dc:creator><feedburner:origLink>https://www.thisamericanlife.org/689/digging-up-the-bones</feedburner:origLink></item>
+<item>
+ <title>688: The Out Crowd</title>
+ <link>http://feed.thisamericanlife.org/~r/talpodcast/~3/Rv4fL2nRHPI/the-out-crowd</link>
+ <description>Reports from the frontlines of the Trump administration's "Remain in Mexico" asylum policy. We hear from asylum seekers waiting across the border in Mexico, in a makeshift refugee camp,  and from the officers who sent them there to wait in the first place. &lt;img src="http://feeds.feedburner.com/~r/talpodcast/~4/Rv4fL2nRHPI" height="1" width="1" alt=""/&gt;</description>
+ <pubDate>Sun, 17 Nov 2019 18:00:00 -0500</pubDate>
+ <guid isPermaLink="false">44334 at https://www.thisamericanlife.org</guid>
+ <itunes:author>This American Life</itunes:author>
+ <enclosure url="https://www.podtrac.com/pts/redirect.mp3/dovetail.prxu.org/188/0c23ff00-49fa-44e7-b752-7e4aca3c111c/688.mp3" type="audio/mpeg" />
+ <itunes:duration>01:07:58</itunes:duration>
+ <itunes:subtitle>Reports from the frontlines of the Trump administration's "Remain in Mexico" asylum policy.
+</itunes:subtitle>
+ <itunes:summary>Reports from the frontlines of the Trump administration's "Remain in Mexico" asylum policy. We hear from asylum seekers waiting across the border in Mexico, in a makeshift refugee camp,  and from the officers who sent them there to wait in the first place. 
+</itunes:summary>
+<dc:creator>This American Life</dc:creator><feedburner:origLink>https://www.thisamericanlife.org/688/the-out-crowd</feedburner:origLink></item>
+<item>
+ <title>687: Small Things Considered</title>
+ <link>http://feed.thisamericanlife.org/~r/talpodcast/~3/_EPKmkmA9vg/small-things-considered</link>
+ <description>Stories about being little. Secret writings in tiny letters. The power of a very small number. And a medication that's supposed to cure shortness. &lt;img src="http://feeds.feedburner.com/~r/talpodcast/~4/_EPKmkmA9vg" height="1" width="1" alt=""/&gt;</description>
+ <pubDate>Sun, 10 Nov 2019 18:00:00 -0500</pubDate>
+ <guid isPermaLink="false">44332 at https://www.thisamericanlife.org</guid>
+ <itunes:author>This American Life</itunes:author>
+ <enclosure url="https://www.podtrac.com/pts/redirect.mp3/dovetail.prxu.org/188/4fa7c71a-2df3-4141-957a-92ef144cf854/687.mp3" type="audio/mpeg" />
+ <itunes:duration>01:01:53</itunes:duration>
+ <itunes:subtitle>Stories about being little. Secret writings in tiny letters. The power of a very small number. And a medication that's supposed to cure shortness. 
+</itunes:subtitle>
+ <itunes:summary>Stories about being little. Secret writings in tiny letters. The power of a very small number. And a medication that's supposed to cure shortness. 
+</itunes:summary>
+<dc:creator>This American Life</dc:creator><feedburner:origLink>https://www.thisamericanlife.org/687/small-things-considered</feedburner:origLink></item>
+<item>
+ <title>686: Umbrellas Up</title>
+ <link>http://feed.thisamericanlife.org/~r/talpodcast/~3/hyv2Z2rsJMY/umbrellas-up</link>
+ <description>For over 100 days now, protesters in Hong Kong have taken to the streets every weekend. What it’s like to live through that.&lt;img src="http://feeds.feedburner.com/~r/talpodcast/~4/hyv2Z2rsJMY" height="1" width="1" alt=""/&gt;</description>
+ <pubDate>Sun, 20 Oct 2019 18:00:00 -0400</pubDate>
+ <guid isPermaLink="false">44310 at https://www.thisamericanlife.org</guid>
+ <itunes:author>This American Life</itunes:author>
+ <enclosure url="https://www.podtrac.com/pts/redirect.mp3/dovetail.prxu.org/188/df070e5a-3898-4c9c-b31b-dbe33994918b/686.mp3" type="audio/mpeg" />
+ <itunes:duration>01:14:19</itunes:duration>
+ <itunes:subtitle>For over 100 days now, protesters in Hong Kong have taken to the streets every weekend. What it’s like to live through that.
+</itunes:subtitle>
+ <itunes:summary>For over 100 days now, protesters in Hong Kong have taken to the streets every weekend. What it’s like to live through that.
+</itunes:summary>
+<dc:creator>This American Life</dc:creator><feedburner:origLink>https://www.thisamericanlife.org/686/umbrellas-up</feedburner:origLink></item>
+<item>
+ <title>685: We Come From Small Places</title>
+ <link>http://feed.thisamericanlife.org/~r/talpodcast/~3/5jF0bd6Hzoo/we-come-from-small-places</link>
+ <description>The staff goes to one of the biggest parties in New York City, the Labor Day Carnival and the West Indian American Day Parade in Brooklyn.&lt;img src="http://feeds.feedburner.com/~r/talpodcast/~4/5jF0bd6Hzoo" height="1" width="1" alt=""/&gt;</description>
+ <pubDate>Sun, 13 Oct 2019 18:00:00 -0400</pubDate>
+ <guid isPermaLink="false">44306 at https://www.thisamericanlife.org</guid>
+ <itunes:author>This American Life</itunes:author>
+ <enclosure url="https://www.podtrac.com/pts/redirect.mp3/dovetail.prxu.org/188/12307147-2549-4537-96f6-068dd67832fa/685.mp3" type="audio/mpeg" />
+ <itunes:duration>01:00:10</itunes:duration>
+ <itunes:subtitle>The staff goes to one of the biggest parties in New York City, the Labor Day Carnival and the West Indian American Day Parade in Brooklyn.
+</itunes:subtitle>
+ <itunes:summary>The staff goes to one of the biggest parties in New York City, the Labor Day Carnival and the West Indian American Day Parade in Brooklyn.
+</itunes:summary>
+<dc:creator>This American Life</dc:creator><feedburner:origLink>https://www.thisamericanlife.org/685/we-come-from-small-places</feedburner:origLink></item>
+<item>
+ <title>684: Burn It Down</title>
+ <link>http://feed.thisamericanlife.org/~r/talpodcast/~3/Qd7vp_aiwjE/burn-it-down</link>
+ <description>Stories of people who decide the only way forward — for real change — is to burn everything to the ground.&lt;img src="http://feeds.feedburner.com/~r/talpodcast/~4/Qd7vp_aiwjE" height="1" width="1" alt=""/&gt;</description>
+ <pubDate>Sun, 29 Sep 2019 18:00:00 -0400</pubDate>
+ <guid isPermaLink="false">44295 at https://www.thisamericanlife.org</guid>
+ <itunes:author>This American Life</itunes:author>
+ <enclosure url="https://www.podtrac.com/pts/redirect.mp3/dovetail.prxu.org/188/bcc0951d-57dc-43b6-98b2-91f0b3c32c8b/684.mp3" type="audio/mpeg" />
+ <itunes:duration>01:02:50</itunes:duration>
+ <itunes:subtitle>Stories of people who decide the only way forward — for real change — is to burn everything to the ground.
+</itunes:subtitle>
+ <itunes:summary>Stories of people who decide the only way forward — for real change — is to burn everything to the ground.
+</itunes:summary>
+<dc:creator>This American Life</dc:creator><feedburner:origLink>https://www.thisamericanlife.org/684/burn-it-down</feedburner:origLink></item>
+<item>
+ <title>683: Beer Summit</title>
+ <link>http://feed.thisamericanlife.org/~r/talpodcast/~3/nG6A46aDRdA/beer-summit</link>
+ <description>Two people, sitting down over a beer, hashing out their differences and understanding where the other guy is coming from. Hard to imagine these days, right? It's so rare right now that someone is curious enough to actually see the other person's point of view. This week on the show, beer summits. Including going behind the scenes of the most famous one ever.&lt;img src="http://feeds.feedburner.com/~r/talpodcast/~4/nG6A46aDRdA" height="1" width="1" alt=""/&gt;</description>
+ <pubDate>Sun, 22 Sep 2019 18:00:00 -0400</pubDate>
+ <guid isPermaLink="false">44292 at https://www.thisamericanlife.org</guid>
+ <itunes:author>This American Life</itunes:author>
+ <enclosure url="https://www.podtrac.com/pts/redirect.mp3/dovetail.prxu.org/188/92eaa45a-ea92-42fd-bafe-3fd0f59cfe85/683.mp3" type="audio/mpeg" />
+ <itunes:duration>01:09:23</itunes:duration>
+ <itunes:subtitle>Two people, sitting down over a beer, hashing out their differences. Hard to imagine these days, right? 
+</itunes:subtitle>
+ <itunes:summary>Two people, sitting down over a beer, hashing out their differences and understanding where the other guy is coming from. Hard to imagine these days, right? It's so rare right now that someone is curious enough to actually see the other person's point of view. This week on the show, beer summits. Including going behind the scenes of the most famous one ever.
+</itunes:summary>
+<dc:creator>This American Life</dc:creator><feedburner:origLink>https://www.thisamericanlife.org/683/beer-summit</feedburner:origLink></item>
+</channel>
+</rss>
