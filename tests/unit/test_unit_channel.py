@@ -10,11 +10,11 @@ from media_hoard.data import models
 
 
 @pytest.mark.django_db
-def test_channel_init(fix_channel_data):
+def test_channel_init(fix_btb_channel):
     expected_slug = 'behind-the-bastards'
-    fix_channel_data.pop('items')
+    fix_btb_channel.pop('items')
 
-    channel = models.Channel.objects.create(**fix_channel_data)
+    channel = models.Channel.objects.create(**fix_btb_channel)
 
     assert channel.id
     assert channel.time_added
@@ -23,4 +23,4 @@ def test_channel_init(fix_channel_data):
     assert expected_slug == channel.slug
 
     with pytest.raises(IntegrityError):
-        channel = models.Channel.objects.create(**fix_channel_data)
+        channel = models.Channel.objects.create(**fix_btb_channel)

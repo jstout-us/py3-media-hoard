@@ -19,12 +19,12 @@ def pytest_configure():
 
 
 @pytest.fixture
-def fix_uri_rss():
+def fix_btb_uri():
     return 'tests/_fixtures/feeds/behind_the_bastards.rss'
 
 
 @pytest.fixture
-def fix_channel_data(fix_uri_rss):
+def fix_btb_channel(fix_btb_uri):
     summary = "<p>There’s a reason the History Channel has produced hundreds of documentaries about Hitler but only a few about Dwight D. Eisenhower. Bad guys (and gals) are eternally fascinating. Behind the Bastards dives in past the Cliffs Notes of the worst humans in history and exposes the bizarre realities of their lives. Listeners will learn about the young adult novels that helped Hitler form his monstrous ideology, the founder of Blackwater’s insane quest to build his own Air Force, the bizarre lives of the sons and daughters of dictators and Saddam Hussein’s side career as a trashy romance novelist.</p>"
     uri_icon = "https://megaphone-prod.s3.amazonaws.com/podcasts/22c36480-3778-11e8-806d-cfb84f1d0648/image/uploads_2F1547069138516-4edafwuejvc-14cc4c048140986ac2bacd6b0e0f022d_2FBehindTheBastards-Logo-iHR-FINAL-3000x3000.jpg"
 
@@ -36,7 +36,7 @@ def fix_channel_data(fix_uri_rss):
         'publisher': "iHeartRadio (applepodcast@howstuffworks.com)",
         'summary': summary,
         'uri_site': 'https://www.behindthebastards.com/',
-        'uri_feed': fix_uri_rss,
+        'uri_feed': fix_btb_uri,
         'uri_image': uri_icon,
         'items': 173,
         }
@@ -45,7 +45,7 @@ def fix_channel_data(fix_uri_rss):
 
 
 @pytest.fixture
-def fix_item_data():
+def fix_btb_item():
     fixture = {
         'title': "Part One; The Idiot Who Made, And Destroyed, WeWork",
         'subtitle': "",
