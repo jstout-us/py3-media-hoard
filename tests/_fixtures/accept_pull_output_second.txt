@@ -1,0 +1,5 @@
+Pull feed from Behind the Bastards - ok
+Pull feed from This American Life - ok
+Pull item 1/3 - This American Life - 690: Too Close to Home (00:59:54) - ok
+Pull item 2/3 - This American Life - 576: Say Yes To Christmas (01:02:45) - ok
+Pull item 3/3 - Behind the Bastards - Part One; The Idiot Who Made, And Destroyed, WeWork (01:26:11) - ok
