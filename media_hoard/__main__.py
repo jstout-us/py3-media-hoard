@@ -33,6 +33,7 @@ def setup():
 
     if not db_path.is_file():
         print('Initialize DB')
+        data_root.mkdir(parents=True)
         store = sys.stdout
         with open(os.devnull, 'w') as fd_null:
             sys.stdout = fd_null
