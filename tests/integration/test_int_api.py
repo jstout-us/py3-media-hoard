@@ -109,11 +109,11 @@ def test_subscribe_btb_rss(fix_btb_uri, fix_btb_channel):
 def test_channel_pull(exp_items, fix_channel, fix_items):
     channel = models.Channel.objects.create(**fix_channel)
 
-    with mock.patch('media_hoard.publisher.get_feed', return_value=fix_items[-1:]) as mocked:
+    with mock.patch('media_hoard.publisher.get_feed', return_value=(fix_channel, fix_items[-1:])) as mocked:
         api.pull()
         assert models.Items.objects.all().count() == 1
 
-    with mock.patch('media_hoard.publisher.get_feed', return_value=fix_items) as mocked:
+    with mock.patch('media_hoard.publisher.get_feed', return_value=(fix_channel, fix_items)) as mocked:
         api.pull()
         assert models.Items.objects.all().count() == 2
 
