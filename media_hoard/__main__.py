@@ -8,7 +8,7 @@ from pathlib import Path
 
 import click
 import django
-
+from dateutil import tz
 from django.conf import settings
 from django.core.management import execute_from_command_line
 
@@ -18,6 +18,10 @@ from . import config
 def setup():
     """Aapplication and Django setup."""
     data_root = Path(config.get_data_root())
+    pub_root = Path(config.get_publish_root())
+
+    media_root = data_root / 'items'
+
     db_path = data_root / 'db.sqlite'
 
     settings.configure(
@@ -28,12 +32,17 @@ def setup():
                 'ENGINE': 'django.db.backends.sqlite3',
                 'NAME': str(db_path)
                 }
-            }
+            },
+        TIME_ZONE = 'America/Los_Angeles',
+        USE_TZ = True,
+        MEDIA_ROOT = str(media_root)
         )
 
     if not db_path.is_file():
         print('Initialize DB')
-        data_root.mkdir(parents=True)
+        media_root.mkdir(parents=True)
+        pub_root.mkdir(parents=True)
+
         store = sys.stdout
         with open(os.devnull, 'w') as fd_null:
             sys.stdout = fd_null
@@ -66,3 +75,17 @@ def subscribe(url):
 
     except api.FeedParseError:
         click.echo('Subscription failed - Failed to retreive or parse feed')
+
+
+@cli.command()
+@click.option('--newest', default='9999-12-31', type=click.DateTime(), help="newest pubdate to pull")
+@click.option('--oldest', default='1-1-1', type=click.DateTime(), help="oldest pubdate to pull")
+def pull(newest, oldest):
+    """Check all subscribed channels and add new items."""
+    setup()
+    from . import api   # pylint: disable=import-outside-toplevel
+
+    newest = newest.replace(tzinfo=tz.UTC)
+    oldest = oldest.replace(tzinfo=tz.UTC)
+
+    api.pull(newest=newest, oldest=oldest)

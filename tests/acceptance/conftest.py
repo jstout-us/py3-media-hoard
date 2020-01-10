@@ -9,7 +9,7 @@ def fix_env(tmp_path):
     fixture = os.environ.copy()
     fixture['HOME'] = '/home/user'
     fixture['MH_DATA_ROOT'] = str(tmp_path / 'data')
-    fixture['MH_PUB_ROOT'] = str(tmp_path / 'pub')
+    fixture['MH_PUBLISH_ROOT'] = str(tmp_path / 'pub')
 
     return fixture
 

@@ -14,8 +14,10 @@ def pytest_configure():
                 'default': {
                     'ENGINE': 'django.db.backends.sqlite3',
                     }
-                }
-            )
+                },
+        TIME_ZONE = 'America/Los_Angeles',
+        USE_TZ = True,
+        )
 
 
 @pytest.fixture

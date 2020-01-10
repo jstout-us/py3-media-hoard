@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
 """Test module doc string."""
+import os
+
 from datetime import datetime
 from unittest import mock
 
@@ -64,13 +66,15 @@ def exp_items():
     fixture = [
         {
             'title': 'Older Podcast Episode',
-            'hash': '93931086528aa8631718ed3d1f98e9914f121ee1',
-            'status': 'ok'
+            'hash_sha1': '93931086528aa8631718ed3d1f98e9914f121ee1',
+            'state': 'OK',
+            'symlink_name': 'Podcast Channel 1/20191212 - Older Podcast Episode.mp3'
             },
         {
             'title': 'Latest Podcast Episode',
-            'hash': '03268bb13baa9d277e15cc1b15d7b6457f3072d5',
-            'status': 'ok'
+            'hash_sha1': '03268bb13baa9d277e15cc1b15d7b6457f3072d5',
+            'state': 'OK',
+            'symlink_name': 'Podcast Channel 1/20191217 - Latest Podcast Episode.mp3'
             }
         ]
 
@@ -105,21 +109,35 @@ def test_subscribe_btb_rss(fix_btb_uri, fix_btb_channel):
         api.subscribe('path/to/no_such_fixture.rss')
 
 
-@pytest.mark.django_db
-def test_channel_pull(exp_items, fix_channel, fix_items):
+@pytest.mark.django_db(transaction=True)
+def test_channel_pull(tmp_path, settings, exp_items, fix_channel, fix_items):
+    media_root = tmp_path / 'items'
+    media_root.mkdir()
+    settings.MEDIA_ROOT = str(media_root)
+
+    pub_root = tmp_path / 'pub'
+    pub_root.mkdir()
+
+    patch_dict = {'HOME': '/home/user', 'MH_PUBLISH_ROOT': str(pub_root)}
+    patch_pull = 'media_hoard.publisher.get_feed'
+    pull_1_retval = (fix_channel, fix_items[-1:])
+    pull_2_retval = (fix_channel, fix_items)
+
     channel = models.Channel.objects.create(**fix_channel)
 
-    with mock.patch('media_hoard.publisher.get_feed', return_value=(fix_channel, fix_items[-1:])) as mocked:
-        api.pull()
-        assert models.Items.objects.all().count() == 1
+    with mock.patch.dict(os.environ, patch_dict):
+        with mock.patch(patch_pull, return_value=pull_1_retval) as mocked:
+            api.pull()
+            assert models.Item.objects.all().count() == 1
 
-    with mock.patch('media_hoard.publisher.get_feed', return_value=(fix_channel, fix_items)) as mocked:
-        api.pull()
-        assert models.Items.objects.all().count() == 2
+        with mock.patch(patch_pull, return_value=pull_2_retval) as mocked:
+            api.pull()
+            assert models.Item.objects.all().count() == 2
 
-    for count, item in enumerate(models.Items.objects.all()):
+    for count, item in enumerate(models.Item.objects.all()):
         assert channel == item.channel
         assert exp_items[count]['title'] == item.title
-        assert exp_items[count]['hash'] == item.hash
-        assert exp_items[count]['status'] == item.status
-        assert item.file.path.is_file()
+        assert exp_items[count]['hash_sha1'] == item.hash_sha1
+        assert exp_items[count]['state'] == item.state
+        assert (media_root / item.file.name).is_file()
+        assert (pub_root / exp_items[count]['symlink_name']).is_symlink()

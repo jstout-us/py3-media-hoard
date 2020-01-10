@@ -22,3 +22,17 @@ def test_get_data_root_override():
     expected = '/alt/path'
 
     assert expected == config.get_data_root()
+
+
+@mock.patch.dict(os.environ,{'HOME': '/home/user'})
+def test_get_publish_root_default():
+    expected = '/home/user/Podcasts'
+
+    assert expected == config.get_publish_root()
+
+
+@mock.patch.dict(os.environ,{'HOME': '/home/user', 'MH_PUBLISH_ROOT': '/alt/path'})
+def test_get_publish_root_override():
+    expected = '/alt/path'
+
+    assert expected == config.get_publish_root()

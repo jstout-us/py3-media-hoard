@@ -1,5 +1,5 @@
-Pull feed from Behind the Bastards - ok
-Pull feed from This American Life - ok
-Pull item 1/3 - This American Life - 323: The Super (01:00:30) - ok
-Pull item 2/3 - Behind the Bastards - The School That Raped Everbody (01:26:48) - ok
-Pull item 3/3 - Behind the Bastards - Part Three: Jerry Falwell: Founder of the Religious Right (00:51:30) - ok
+Pull feed from Behind the Bastards [ OK ]
+Pull feed from This American Life [ OK ]
+Pull item 1/3 - This American Life - 323: The Super (01:00:30) [ OK ]
+Pull item 2/3 - Behind the Bastards - The School That Raped Everbody (01:26:48) [ OK ]
+Pull item 3/3 - Behind the Bastards - Part Three: Jerry Falwell: Founder of the Religious Right (00:51:30) [ OK ]
