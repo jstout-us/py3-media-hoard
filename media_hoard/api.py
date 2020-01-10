@@ -2,8 +2,6 @@
 
 """Module Media Hoard.api."""
 import tempfile
-
-from datetime import datetime
 from pathlib import Path
 
 from django.db.utils import IntegrityError
@@ -34,7 +32,7 @@ def pull(**kwargs):
     Returns:
         None
     """
-    for channel in models.Channel.objects.all():                        # pylint: disable=no-member
+    for channel in models.Channel.objects.all():                                    # pylint: disable=no-member
         _, feed_items = publisher.get_feed(channel.uri_feed, **kwargs)
         print('Pull feed from {} [ OK ]'.format(channel.title))
 
@@ -45,7 +43,7 @@ def pull(**kwargs):
             except IntegrityError:
                 pass
 
-    new_items = models.Item.objects.filter(state='QD').order_by('-time_published') # pylint: disable=no-member
+    new_items = models.Item.objects.filter(state='QD').order_by('-time_published')  # pylint: disable=no-member
     new_item_count = new_items.count()
 
     for count, item in enumerate(new_items, start=1):
@@ -72,11 +70,11 @@ def pull(**kwargs):
             (pub_dir / name).symlink_to(target)
 
         print('Pull item {}/{} - {} - {} ({}) [ {} ]'.format(count,
-                                                      new_item_count,
-                                                      item.channel.title,
-                                                      item.title,
-                                                      util.format_duration(item.duration),
-                                                      item.state))
+                                                             new_item_count,
+                                                             item.channel.title,
+                                                             item.title,
+                                                             util.format_duration(item.duration),
+                                                             item.state))
 
 
 def subscribe(src):

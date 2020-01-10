@@ -33,9 +33,9 @@ def setup():
                 'NAME': str(db_path)
                 }
             },
-        TIME_ZONE = 'America/Los_Angeles',
-        USE_TZ = True,
-        MEDIA_ROOT = str(media_root)
+        TIME_ZONE='America/Los_Angeles',
+        USE_TZ=True,
+        MEDIA_ROOT=str(media_root)
         )
 
     if not db_path.is_file():
@@ -78,7 +78,8 @@ def subscribe(url):
 
 
 @cli.command()
-@click.option('--newest', default='9999-12-31', type=click.DateTime(), help="newest pubdate to pull")
+@click.option('--newest', default='9999-12-31', type=click.DateTime(),
+              help="newest pubdate to pull")
 @click.option('--oldest', default='1-1-1', type=click.DateTime(), help="oldest pubdate to pull")
 def pull(newest, oldest):
     """Check all subscribed channels and add new items."""

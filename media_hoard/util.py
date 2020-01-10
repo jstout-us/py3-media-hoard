@@ -14,7 +14,7 @@ BUF_SIZE = 65536
 
 
 def copy_file(src, dst):
-    """Copy file between source and destination
+    """Copy file between source and destination.
 
     Args:
         src(str):   Path in either uri format or local path

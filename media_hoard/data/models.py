@@ -30,6 +30,7 @@ class Channel(models.Model):
 
 class Item(models.Model):
     """Podcast Item Record."""
+
     QUEUED = 'QD'
     OK = 'OK'
     WARN = 'WR'
@@ -57,9 +58,12 @@ class Item(models.Model):
     file = models.FileField(null=True)
     channel = models.ForeignKey(Channel, related_name='items', on_delete=models.CASCADE)
 
-    class Meta:
+    class Meta:                                     # pylint: disable=too-few-public-methods
+        """For pylint."""
+
         unique_together = ['channel', 'guid']
 
     @property
     def format(self):
+        """Return item format."""
         return "mp3"
