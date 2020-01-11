@@ -3,9 +3,12 @@
 """Module Media Hoard.publisher."""
 import operator
 
+from datetime import datetime
+
 import feedparser
 
 from dateutil import parser
+from dateutil import tz
 
 
 def _get_uri_src(links):
@@ -49,21 +52,26 @@ def _normalize_item(entry):
     return item
 
 
-def get_feed(src):
+def get_feed(src, **kwargs):
     """Retreive and parse channel feed.
 
     Args:
         src(str):   url or file path to channel feed file.
 
+    Kwargs:
+        newest(datetime):   Newest item publish date to add
+        oldest(datetime):   Oldest item publish date to add
+
     Returns:
         channel(dict):  The channel information dictionary
         items(list):    List of channel item dictionaries
     """
-    feed = feedparser.parse(src)
-    items = [_normalize_item(x) for x in feed.pop('entries')]
+    newest = kwargs.get('newest', datetime(9999, 12, 31, 0, 0, 0, tzinfo=tz.UTC))
+    oldest = kwargs.get('oldest', datetime(1, 1, 1, 0, 0, 0, tzinfo=tz.UTC))
 
-    # publisher = '{} ({})'.format(feed['feed']['publisher_detail']['name'],
-    #                              feed['feed']['publisher_detail']['email'])
+    feed = feedparser.parse(src, )
+    items = [_normalize_item(x) for x in feed.pop('entries')]
+    items = [x for x in items if oldest <= x['time_published'] <= newest]
 
     publisher = '{} ({})'.format(feed['feed']['author_detail']['name'],
                                  feed['feed']['author_detail']['email'])

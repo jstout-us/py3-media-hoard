@@ -8,3 +8,9 @@ def get_data_root():
     """Return data root directory path."""
     data_root_default = '{}/.local/share/jstout-us/media-hoard'.format(os.environ['HOME'])
     return os.environ.get('MH_DATA_ROOT', data_root_default)
+
+
+def get_publish_root():
+    """Return publish root directory path."""
+    pub_root_default = '{}/Podcasts'.format(os.environ['HOME'])
+    return os.environ.get('MH_PUBLISH_ROOT', pub_root_default)

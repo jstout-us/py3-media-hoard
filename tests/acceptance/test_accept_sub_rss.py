@@ -2,44 +2,32 @@
 
 """Test module doc string."""
 import os
+from pathlib import Path
 
 import pytest
 import subprocess
 
-import media_hoard
+from . import commands
 
+def test_accept_sub_rss(fix_env, fix_uri_btb, fix_uri_tam):
+    uri_bad ='http://liberator/podcasts/no-such-podcast/channel.rss'
 
-def test_accept_sub_rss(tmp_path):
-    env = os.environ.copy()
-    env['MH_DATA_ROOT'] = str(tmp_path)
-    env['HOME'] = '/home/user'
-
-    # First run of application
     expected = 'Initialize DB\nSubscribed to channel - Behind the Bastards (173 Items)\n'
-    args = [
-        'media-hoard',
-        'subscribe',
-        'http://liberator/podcasts/behind-the-bastards/channel.rss'
-        ]
-
-    result = subprocess.check_output(args=args, encoding='utf-8', env=env)
+    result =  commands.channel_sub(fix_env, fix_uri_btb)
     assert expected == result
-    assert (tmp_path / 'db.sqlite').is_file()
+    assert (Path(fix_env['MH_DATA_ROOT']) / 'db.sqlite').is_file()
 
     # Duplicate subscription
     expected = 'Already subscribed to channel - Behind the Bastards\n'
-    result = subprocess.check_output(args=args, encoding='utf-8', env=env)
+    result =  commands.channel_sub(fix_env, fix_uri_btb)
     assert expected == result
 
-     # Test bad URL
+    # Test bad URL
     expected = 'Subscription failed - Failed to retreive or parse feed\n'
-    args[-1] = 'http://liberator/podcasts/no-such-podcast/channel.rss'
-    result = subprocess.check_output(args=args, encoding='utf-8', env=env)
+    result =  commands.channel_sub(fix_env, uri_bad)
     assert expected == result
 
     # Second run of application
     expected = 'Subscribed to channel - This American Life (10 Items)\n'
-    args[-1] = 'http://liberator/podcasts/this-american-life/channel.rss'
-    result = subprocess.check_output(args=args, encoding='utf-8', env=env)
-
+    result =  commands.channel_sub(fix_env, fix_uri_tam)
     assert expected == result
